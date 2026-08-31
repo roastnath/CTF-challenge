@@ -5,12 +5,12 @@ A suspicious transaction statement from BrothaaPay has been recovered. The state
 Investigate the provided artifact, follow the clues, and uncover what BrothaaPay's document viewer is hiding.
 
 `difficulty: Medium` <br>
-`author: Jai`
+`author: Codenath`
 
 ## Flag
 
 ```text
-EH4X{money_follows_my_brothaa}
+EH4X{M0N3Y_D035'N7_F0LL0W5_BR07H44_K33PW0RK1NG}
 ```
 
 ## Solution
