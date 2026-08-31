@@ -10,7 +10,7 @@ Investigate the provided artifact, follow the clues, and uncover what BrothaaPay
 ## Flag
 
 ```text
-EH4X{M0N3Y_D035'N7_F0LL0W5_BR07H44_K33PW0RK1NG}
+FLAG{M0N3Y_D035'N7_F0LL0W5_BR07H44_K33PW0RK1NG}
 ```
 
 ## Solution
@@ -58,3 +58,16 @@ This can be used to traverse outside the intended public directory and reach the
 The challenge therefore combines a small forensic investigation with a web path traversal vulnerability.
 
 The forensic component provides the clue, while the web component provides the actual exploitation step.
+
+
+##solution
+
+## Solution
+
+Run `exiftool` on the provided PDF to inspect its metadata and find the clue pointing to the BrothaaPay Static Viewer. Investigating the viewer reveals the `X-Statement-File` header used to retrieve documents.
+
+A direct `../` path traversal is blocked, but URL-encoding the dots as `%2e%2e` bypasses the validation. This allows traversal to the hidden `private/archive/final.txt` file, which contains the flag.
+
+```text
+FLAG{M0N3Y_D035'N7_F0LL0W5_BR07H44_K33PW0RK1NG}
+```
