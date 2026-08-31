@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BrothaaPay Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>💸 BrothaaPay</h1>
+
+        <div class="card">
+
+            <h2>Dashboard</h2>
+
+            <p>Welcome back, Brothaa.</p>
+
+            <h3>Current Balance</h3>
+
+            <div class="balance">₹ 0</div>
+
+            <hr>
+
+            <h3>Recent Transactions</h3>
+
+            <p>Nothing suspicious here. 👀</p>
+
+            
+            <a href="/transactions">
+                <button>View Transactions</button>
+            </a>
+            
+            <a href="/viewer">
+                <button>Statement Viewer</button>
+            </a>
+
+            
+        </div>
+
+    </div>
+
+</body>
+
+</html>

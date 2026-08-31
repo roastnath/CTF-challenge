@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Statement Viewer - BrothaaPay</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>💸 BrothaaPay</h1>
+
+    <div class="card">
+
+        <h2>Statement Viewer</h2>
+
+        <p>
+            Enter the name of a public document.
+        </p>
+
+       <form action="/viewer" method="GET">
+
+    <label for="file">Document name</label>
+
+    <input
+        id="file"
+        type="text"
+        name="file"
+        placeholder="example: notice.txt"
+    >
+
+    <button type="submit">
+        View Document
+    </button>
+
+</form>
+    </div>
+
+</div>
+
+</body>
+
+</html>

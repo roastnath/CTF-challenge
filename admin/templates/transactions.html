@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transactions - BrothaaPay</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>💸 BrothaaPay</h1>
+
+    <div class="card">
+
+        <h2>Transaction History</h2>
+
+        {% for transaction in transactions %}
+
+        <div class="transaction">
+
+            <p>
+                <strong>{{ transaction.id }}</strong>
+            </p>
+
+            <p>
+                {{ transaction.description }}
+            </p>
+
+            <p>
+                Amount: {{ transaction.amount }}
+            </p>
+
+            <p>
+                Status: {{ transaction.status }}
+            </p>
+
+        </div>
+
+        <hr>
+
+        {% endfor %}
+
+        <a href="/statement">
+            <button>Download Statement</button>
+        </a>
+
+        <br><br>
+
+        <a href="/dashboard">
+            Back to Dashboard
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
